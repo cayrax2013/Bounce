@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: 63bbf111e1fde8b49a72620167a1188f
+guid: 9be3809df6dbe2643a967461799f7984
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -2856678689396442720
-    second: TrassUpgradeIcons_0
-  - first:
-      213: -1867878808770061981
-    second: TrassUpgradeIcons_1
-  - first:
-      213: -8254052933399551980
-    second: TrassUpgradeIcons_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -49,12 +40,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,70 +96,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: TrassUpgradeIcons_0
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 3
-        width: 335
-        height: 394
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 887e93bcd18bc72478be793c440d3d28
-      internalID: -2856678689396442720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TrassUpgradeIcons_1
-      rect:
-        serializedVersion: 2
-        x: 441
-        y: 14
-        width: 374
-        height: 351
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70c1b2e0de097b540ad06052a740579d
-      internalID: -1867878808770061981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TrassUpgradeIcons_2
-      rect:
-        serializedVersion: 2
-        x: 876
-        y: 0
-        width: 334
-        height: 381
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4da4b71dfbd32d2488fa5386a1de179f
-      internalID: -8254052933399551980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

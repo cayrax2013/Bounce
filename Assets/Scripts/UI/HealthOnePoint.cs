@@ -13,7 +13,7 @@ public class HealthOnePoint : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.TryGetComponent(out Player player))
         {
             health._Health += 1;
             Destroy(gameObject);
