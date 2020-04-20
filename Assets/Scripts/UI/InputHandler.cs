@@ -27,13 +27,18 @@ public class InputHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void NavigateToMainMenu()
     {
-        _mainMenuPanel.SetActive(true);
-        _levelsPanel.SetActive(false);
+        if (_mainMenuPanel != null)
+        {
+            _mainMenuPanel.SetActive(true);
+            _levelsPanel.SetActive(false);
+        }
+        else
+            SceneManager.LoadScene("MainMenu");
     }
 
     public void StartLeve1()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level1");
     }
 
     public void OnPointerDown(PointerEventData eventData)

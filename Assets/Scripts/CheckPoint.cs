@@ -1,24 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CheckPoint : MonoBehaviour
 {
-    private GameMaster gameMaster;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private UnityEvent _camePlayer;
+
+    private GameMaster _gameMaster;
+    private SpriteRenderer _spriteRenderer;
 
     private void Start()
     {
-        gameMaster = GameObject.FindGameObjectWithTag("gameMaster").GetComponent<GameMaster>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _gameMaster = GameObject.FindGameObjectWithTag("gameMaster").GetComponent<GameMaster>();
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Player player))
         {
-            gameMaster.lastCheckPointPos = transform.position;
-            spriteRenderer.enabled = false;
+            _camePlayer?.Invoke();
+            _gameMaster.lastCheckPointPos = transform.position;
+            _spriteRenderer.enabled = false;
         }
     }
 }
