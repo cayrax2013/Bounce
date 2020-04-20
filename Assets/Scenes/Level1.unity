@@ -400,7 +400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60225576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 108.9, y: 0.24, z: -10}
+  m_LocalPosition: {x: 2.38, y: 0.24, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1478017050}
@@ -1788,7 +1788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 108.9, y: 0.24, z: -10}
+  m_LocalPosition: {x: 2.38, y: 0.24, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1999913481}
@@ -48111,12 +48111,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1085557094}
-        m_MethodName: 
+      - m_Target: {fileID: 1085557095}
+        m_MethodName: NavigateToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -53562,7 +53562,7 @@ PrefabInstance:
     - target: {fileID: 3896940621257719554, guid: 4fdcff3f5f68e79468283e09d5cfcdb9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 108.9
+      value: 2.38
       objectReference: {fileID: 0}
     - target: {fileID: 3896940621257719554, guid: 4fdcff3f5f68e79468283e09d5cfcdb9,
         type: 3}
