@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-    private GameMaster gm;
+    private GameMaster gameMaster;
     private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
-        gm = GameObject.FindGameObjectWithTag("gameMaster").GetComponent<GameMaster>();
+        gameMaster = GameObject.FindGameObjectWithTag("gameMaster").GetComponent<GameMaster>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.TryGetComponent(out Player player))
         {
-            gm.lastCheckPointPos = transform.position;
+            gameMaster.lastCheckPointPos = transform.position;
             spriteRenderer.enabled = false;
         }
     }

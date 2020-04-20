@@ -17,13 +17,4 @@ public class GameMaster : MonoBehaviour
         else
             Destroy(gameObject);
     }
-
-    public int points;
-
-    public Text pointsText;
-
-    private void Update()
-    {
-        pointsText.text = ("Points: " + points);
-    }
 }
