@@ -10,14 +10,10 @@ public class Score : MonoBehaviour
     [SerializeField] private UnityEventInt _onScoreChanged;
     [SerializeField] private int _currentScore;
 
-    private void Start()
-    {
-        _onScoreChanged?.Invoke(_currentScore);
-    }
-
     public void TakeScore(int score)
     {
         _currentScore += score;
+        PlayerPrefs.SetInt("currentScore", _currentScore);
         _onScoreChanged?.Invoke(_currentScore);
     }
 }

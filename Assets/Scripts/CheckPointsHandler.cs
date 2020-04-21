@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameMaster : MonoBehaviour
+public class CheckPointsHandler : MonoBehaviour
 {
-    private static GameMaster instance;
+    private static CheckPointsHandler _instance;
     public Vector2 lastCheckPointPos;
     private void Awake()
     {
-        if (instance == null)
+        if (_instance == null)
         {
-            instance = this;
-            DontDestroyOnLoad(instance);
+            _instance = this;
+            DontDestroyOnLoad(_instance);
         }
         else
             Destroy(gameObject);

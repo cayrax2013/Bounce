@@ -7,12 +7,12 @@ public class CheckPoint : MonoBehaviour
 {
     [SerializeField] private UnityEvent _camePlayer;
 
-    private GameMaster _gameMaster;
+    private CheckPointsHandler _gameMaster;
     private SpriteRenderer _spriteRenderer;
 
     private void Start()
     {
-        _gameMaster = GameObject.FindGameObjectWithTag("gameMaster").GetComponent<GameMaster>();
+        _gameMaster = GameObject.FindGameObjectWithTag("gameMaster").GetComponent<CheckPointsHandler>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 

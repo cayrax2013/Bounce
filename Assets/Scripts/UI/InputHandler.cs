@@ -8,11 +8,11 @@ public class InputHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 {
     [SerializeField] private PlayerJumper _playerJumper;
     [SerializeField] private PlayerMover _playerMover;
-    [SerializeField] private float _direction;
     [SerializeField] private GameObject _mainMenuPanel;
     [SerializeField] private GameObject _levelsPanel;
+    [SerializeField] private float _direction;
 
-    private bool _buttonIsPressed;
+    private bool _theButtonWasPressed;
 
     public void QuitGame()
     {
@@ -43,19 +43,17 @@ public class InputHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        _buttonIsPressed = true;
+        _theButtonWasPressed = true;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        _buttonIsPressed = false;
+        _theButtonWasPressed = false;
     }
 
     private void Update()
     {
-        if (_buttonIsPressed)
-        {
+        if (_theButtonWasPressed)
             _playerMover.Move(_direction);
-        }
     }
 }

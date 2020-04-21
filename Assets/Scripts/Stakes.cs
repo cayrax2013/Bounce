@@ -6,17 +6,13 @@ using UnityEngine.Events;
 public class Stakes : MonoBehaviour
 {
     [SerializeField] private UnityEvent _cameAcrossToPlayer;
-    
-    private GameMaster _gameMaster;
-    private GameObject spawnPoint_1;
-    private Health health;
-    private PlayerMover player;
+    [SerializeField] private int _damage = 1;
+    [SerializeField] private CheckPointsHandler _checkPointsHandler;
+    private GameObject _spawnPoint_1;
 
     private void Start()
     {
-        health = GameObject.FindGameObjectWithTag("HealthHandler").GetComponent<Health>();
-        spawnPoint_1 = GameObject.FindGameObjectWithTag("SpawnPoint_1");
-        //_gameMaster = GameObject.FindGameObjectWithTag("gameMaster").GetComponent<GameMaster>();
+        _spawnPoint_1 = GameObject.FindGameObjectWithTag("SpawnPoint_1");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,10 +20,8 @@ public class Stakes : MonoBehaviour
         if (collision.TryGetComponent(out Player player))
         {
             _cameAcrossToPlayer?.Invoke();
-            collision.transform.position = _gameMaster.lastCheckPointPos;
-            //player.transform.position = spawnPoint_1.transform.position;
-            health._Health -= 1;
-
+            collision.transform.position = _checkPointsHandler.lastCheckPointPos;
+            player.GetComponent<Health>().TakeDamage(_damage);
         }
     }
 }
