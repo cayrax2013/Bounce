@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayerPos : MonoBehaviour
 {
-    private CheckPointsHandler gm;
+    private CheckPointsHandler checkPointHandler;
 
     private void Start()
     {
-        gm = GameObject.FindGameObjectWithTag("gameMaster").GetComponent<CheckPointsHandler>();
-        transform.position = gm.lastCheckPointPos;
+        checkPointHandler = GameObject.FindGameObjectWithTag("gameMaster").GetComponent<CheckPointsHandler>();
+        transform.position = checkPointHandler.lastCheckPointPos;
     }
 }

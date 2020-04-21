@@ -8,6 +8,7 @@ public class Stakes : MonoBehaviour
     [SerializeField] private UnityEvent _cameAcrossToPlayer;
     [SerializeField] private int _damage = 1;
     [SerializeField] private CheckPointsHandler _checkPointsHandler;
+
     private GameObject _spawnPoint_1;
 
     private void Start()

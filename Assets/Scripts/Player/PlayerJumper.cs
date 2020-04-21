@@ -7,7 +7,6 @@ using UnityEngine.Events;
 public class PlayerJumper : MonoBehaviour
 {
     [SerializeField] private float _tapForce;
-    [SerializeField] private ContactFilter2D _filter;
     [SerializeField] private UnityEvent _jumped;
 
     private Rigidbody2D _rigidbody2D;
