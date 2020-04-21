@@ -8,7 +8,6 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private float _speed;
 
     private Rigidbody2D _rigidbody;
-    private float _moveX;
 
     private void Start()
     {
